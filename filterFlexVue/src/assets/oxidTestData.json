@@ -18,7 +18,7 @@
       "Fon": "081057769002",
       "Fachrichtung": "Grosser Umsatz",
       "OrderNetSum": 39.99,
-      "STATUS": null,
+      "STATUS": 1,
       "DATUM": null
     },
     {
@@ -40,7 +40,7 @@
       "Fon": "081057769002",
       "Fachrichtung": "Grosser Umsatz",
       "OrderNetSum": 30.64,
-      "STATUS": null,
+      "STATUS": 3,
       "DATUM": null
     },
     {
