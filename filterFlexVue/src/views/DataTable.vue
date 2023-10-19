@@ -81,7 +81,6 @@
         <p><strong>Order Date:</strong> {{ selectedOrder.ORDERDATE }}</p>
         <p><strong>Customer Name:</strong> {{ selectedOrder.FULLNAME }}</p>
         <p><strong>Customer Email:</strong> {{ selectedOrder.eMail }}</p>
-        <!-- Add other order details as required -->
       </div>
     </el-dialog>
   </div>
@@ -126,18 +125,15 @@ export default {
     },
 
     showOrderDetails(order) {
-      console.log(order);
       this.selectedOrder = order;
 
       this.orderDialogVisible = true;
     },
-    rowClassName({ row, rowIndex }) {
+    rowClassName({ row }) {
       if (row.STATUS === 1) {
-        return "background-color:#f78989";
-        //return "warning-row";
+        return "warning-row";
       } else if (row.STATUS === 3) {
-        return "background-color:#85ce61";
-        //return "success-row";
+        return "success-row";
       }
       return "";
     },
@@ -193,16 +189,9 @@ export default {
 }
 
 .el-table .warning-row {
-  --el-table-tr-bg-color: #f78989 !important;
+  --el-table-tr-bg-color: var(--el-color-warning-light-9);
 }
 .el-table .success-row {
-  --el-table-tr-bg-color: #85ce61 !important;
+  --el-table-tr-bg-color: var(--el-color-success-light-9);
 }
-/* .status-warning {
-  background-color: #f78989;
-}
-
-.status-success {
-  background-color: #85ce61;
-} */
 </style>
